@@ -3,8 +3,8 @@ import Game from './Game'
 
 export default () => (
   <>
-    <h1>Welcome to React Parcel Micro App!</h1>
-    <p>Hard to get more minimal than this React app.</p>
+    <h1>Welcome to ... and Learns!</h1>
+    <h2>React 101 is awesome!</h2>
     <Game />
   </>
 );
