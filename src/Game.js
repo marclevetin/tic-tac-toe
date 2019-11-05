@@ -42,14 +42,6 @@ class Game extends React.Component {
                         xplayer={firstPlayer}
                         oplayer={secondPlayer}
                     />
-                    <Board
-                        xplayer={firstPlayer}
-                        oplayer={secondPlayer}
-                    />
-                    <Board
-                        xplayer={firstPlayer}
-                        oplayer={secondPlayer}
-                    />
                 </div>
             </div>
         );

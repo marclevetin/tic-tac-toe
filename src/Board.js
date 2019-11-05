@@ -73,7 +73,7 @@ class Board extends React.Component {
         return (
             <div>
                 <div className="status">{status}</div>
-                <div className="board-marc">
+                <div className="board">
                     {allTheSquares}
                 </div>
                 <button disabled={!winner} onClick={this.resetGame}>Reset Game</button>
