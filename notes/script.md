@@ -80,8 +80,25 @@ Square component
 - Button that toggles X and O.
 - List need to have a `key` to make it diff-ing process easier.
 
-## Winning logic
+```
+const allTheSquares = squares.map((square, index) =>
+            <Square
+                key={`square${index}`}
+                value={squares[index]}
+                onClick={() => this.handleClick(index)}
+            />
+        )
+```
+
+## Winning logic / Conditional rendering
 Build a button to reset the game
-Disable the button when
+
+Disable the button when the game is in progress
+
+Change the text when there is a winner:
+```
+const status = winner ? `Winner ${winner}` : `Next Player: ${xIsNext ? `X (${ xplayer })` : `O (${ oplayer })`}`;
+```
+
 
 
