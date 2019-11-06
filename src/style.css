@@ -38,3 +38,19 @@ body {
   z-index: 1;
   background: #ddd;
 }
+
+.square:nth-child(3n) {
+  border-right: none;
+}
+
+.square:nth-child(3n+1) {
+  border-left: none;
+}
+
+.square:nth-child(n+7) {
+  border-bottom: none;
+}
+
+.square:nth-child(-n+3) {
+  border-top: none;
+}

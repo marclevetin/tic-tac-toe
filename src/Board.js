@@ -71,13 +71,13 @@ class Board extends React.Component {
         )
 
         return (
-            <div>
+            <>
                 <div className="status">{status}</div>
                 <div className="board">
                     {allTheSquares}
                 </div>
                 <button disabled={!winner && squares.includes(null)} onClick={this.resetGame}>Reset Game</button>
-            </div>
+            </>
         );
     }
 }

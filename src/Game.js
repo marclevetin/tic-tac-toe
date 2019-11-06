@@ -19,30 +19,32 @@ class Game extends React.Component {
         return (
             <div className="game">
                 <section>
-                <label htmlFor="firstPlayer">First Player Name
-                    <input
-                        type="text"
-                        name="firstPlayer"
-                        value={firstPlayer}
-                        onChange={this.handleChange}
-                    />
-                </label><br/>
-                <label htmlFor="secondPlayer">Second Player Name
-                    <input
-                        type="text"
-                        name="secondPlayer"
-                        value={secondPlayer}
-                        onChange={this.handleChange}
-                    />
-                </label>
+                    <label htmlFor="firstPlayer">First Player Name
+                        <input
+                            type="text"
+                            name="firstPlayer"
+                            placeholder="enter a name"
+                            value={firstPlayer}
+                            onChange={this.handleChange}
+                        />
+                    </label><br/>
+                    <label htmlFor="secondPlayer">Second Player Name
+                        <input
+                            type="text"
+                            name="secondPlayer"
+                            placeholder="enter a name"
+                            value={secondPlayer}
+                            onChange={this.handleChange}
+                        />
+                    </label>
                 </section>
                 <hr />
-                <div className="game-board">
+                <section className="game-board">
                     <Board
                         xplayer={firstPlayer}
                         oplayer={secondPlayer}
                     />
-                </div>
+                </section>
             </div>
         );
     }
