@@ -50,6 +50,8 @@ React maintains a thing called the "Virtual DOM" which is a copy of the DOM that
 We will talk more about this as the demo progresses.
 
 ## State and Props
+***Use Dev Tools to show state and props***
+
 Both state and props hold information about how the component should render.
 Both state and props are plain JS objects.
 State is managed _internally_ to the component.
