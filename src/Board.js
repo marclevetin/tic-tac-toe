@@ -76,7 +76,7 @@ class Board extends React.Component {
                 <div className="board">
                     {allTheSquares}
                 </div>
-                <button disabled={!winner} onClick={this.resetGame}>Reset Game</button>
+                <button disabled={!winner && squares.includes(null)} onClick={this.resetGame}>Reset Game</button>
             </div>
         );
     }

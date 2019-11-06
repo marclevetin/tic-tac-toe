@@ -9,7 +9,9 @@ Features include:
 - automatically calculates winner!
 - doesn't let you overwrite a space that's been taken
 - button to start a new game
+-
 
+_Disclaimer: There's a lot in this project, so I might wave my hands and do some smoke and mirrors, not because I don't want to answer the question, but because I want to get through a lot of stuff._
 
 ## Anatomy of a React project
 React is often used as a Single Page Application (SPA).  Important to note that CyberGrants does _not_ use React in this way.
@@ -39,7 +41,7 @@ JSX stands for Javascript and XML.  It's a templating language that's used with 
 
 ## Components
 ### Virtual DOM and Lifecycle
-Every component goes through a lifecycle.  Like any JS framework, there are a ton of lifecycle methods.  The important ones for today are `render` and `componentDidMount`
+Every component goes through a lifecycle.  Like any JS framework, there are a ton of lifecycle methods.  The important ones for today are `render` and `componentDidMount`.  The other one that is probably important is `componentWillUnmount`.
 
 Learn more here: http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 
@@ -72,6 +74,10 @@ For this demo, we are going to have a couple of simple text fields - player name
 - handleChange function
 - htmlFor attribute
 
+If this was a real form, then I'd have an `onSubmit` function as well.  This isn't a form, per se, so I'm bending the rules.  Remember, you want to write your React to compile down to valid markup!
+
+`<magic>`In a controlled component, you can do nifty things like front-end validation.`</magic>`
+
 
 ## Lists and keys
 "So we have the board, we have the players, let's make some squares!"
@@ -93,7 +99,10 @@ const allTheSquares = squares.map((square, index) =>
 ## Winning logic / Conditional rendering
 Build a button to reset the game
 
-Disable the button when the game is in progress
+Disable the button when the game is in progress and if there game is still going
+```
+<button disabled={!winner && squares.includes(null)} onClick={this.resetGame}>Reset Game</button>
+```
 
 Change the text when there is a winner:
 ```
