@@ -38,6 +38,8 @@ JSX stands for Javascript and XML.  It's a templating language that's used with 
 - As a general rule, you can use any HTML element without change.
   - CSS `class` needs to be entered as `className`.
   - Ditto for multi-word attributes: `tabindex` becomes `tabIndex`.  And the console will let you know when things are wrong.
+  - Show how a rendered component translates to HTML
+    - Show off the Fragment
 
 ## Components
 ### Virtual DOM and Lifecycle
