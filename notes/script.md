@@ -49,7 +49,7 @@ React is often used as a Single Page Application (SPA).  Important to note that 
 
 Say "to get started, we're going to spin up a new app.  Facebook gives us `create-react-app`.  This tool brings out strong emotions in the developer world.  I'm going to use a different tool, `nano-react-app` because it's got less stuff packed in and this is a quick overview.
 
-**Type in terminal: npm nano-react-app tictactoe-demo**
+**Type in terminal: npx nano-react-app tictactoe-demo**
 
 - Open up the `index.html`, go over:
   - Note the head, and add `<link rel="stylesheet" href="./src/style.css">`
