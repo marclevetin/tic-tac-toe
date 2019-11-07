@@ -9,9 +9,40 @@ Features include:
 - automatically calculates winner!
 - doesn't let you overwrite a space that's been taken
 - button to start a new game
--
 
 _Disclaimer: There's a lot in this project, so I might wave my hands and do some smoke and mirrors, not because I don't want to answer the question, but because I want to get through a lot of stuff._
+
+## Baseline Javascript
+- variables with `var`, `const`, and `let`
+```
+var // functional scope, hoists
+let // block scope, can be reassigned
+const /// block scope, can't reassign
+```
+- `Array.map` - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+```
+const a = [1,2,3,4,5];
+a.map(number => number * 2); // 2, 4, 6, 8, 10
+```
+- ternaries are inline if statements.  You can put in truthy/falsey values
+```
+true ? "totally true" : "completely false"; // totally true
+false ? "totally true" : "completely false"; // completely false
+
+const a = 1;
+
+a ? "totally true" : "completely false"; // totally true
+!a ? "totally true" : "completely false"; // completely false
+```
+- object destructuring
+```
+a = [1,2,3,4,5];
+let [first, second, ...other] = a;
+
+a = { dog: 'Waggles', hDog1: 'Timmy' };
+let { dog } = a;
+```
+
 
 ## Anatomy of a React project
 React is often used as a Single Page Application (SPA).  Important to note that CyberGrants does _not_ use React in this way.
@@ -45,6 +76,11 @@ JSX stands for Javascript and XML.  It's a templating language that's used with 
 ### Virtual DOM and Lifecycle
 Every component goes through a lifecycle.  Like any JS framework, there are a ton of lifecycle methods.  The important ones for today are `render` and `componentDidMount`.  The other one that is probably important is `componentWillUnmount`.
 
+If you're curious:
+- `componentDidMount` is often used to get data through APIs.
+- `render` puts the stuf on the page.
+- `componentWillUnMount` is often used for cleanup tasks.
+
 Learn more here: http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 
 React maintains a thing called the "Virtual DOM" which is a copy of the DOM that we see on the page.  When a component has a state change, React's engine sees the change and runs through a diff-ing process to decide is the component needs to change.  It errs on the side of caution and re-renders.  There are ways to control this re-rendering, but that's outside of the scope of this demo.
@@ -70,13 +106,13 @@ Demo example:
 ## Forms
 Forms are kind funky in React.
 Form fields come in two flavors: controlled and uncontrolled.
-- Controlled means that the data is kept in state.  Common for text fields.
+- Controlled means that the data is kept in state.  Common for text fields, radio buttons, selects, etc.
 - Uncontrolled means the opposite.  Common for file uploads.
 
-For this demo, we are going to have a couple of simple text fields - player names
-- unidirectional data flow
+For this demo, we are going to have a couple of simple text fields - player names.  Key points:
+-  unidirectional data flow
 - handleChange function
-- htmlFor attribute
+- `htmlFor` attribute replaces the label's `for`
 
 If this was a real form, then I'd have an `onSubmit` function as well.  This isn't a form, per se, so I'm bending the rules.  Remember, you want to write your React to compile down to valid markup!
 
